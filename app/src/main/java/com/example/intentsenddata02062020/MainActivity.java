@@ -9,19 +9,29 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mBtnSendString;
+    Button mBtnSendString , mBtnSendArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mBtnSendString = findViewById(R.id.buttonSendString);
+        mBtnSendArray = findViewById(R.id.buttonSendArray);
 
         mBtnSendString.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,MainActivity2.class);
                 intent.putExtra(AppConstant.KEY_CHUOI,"Hello main 2");
+                startActivity(intent);
+            }
+        });
+        mBtnSendArray.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int[] arrayNums = {1,2,3,4,5,6,7,8,9,10};
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                intent.putExtra(AppConstant.KEY_ARRAY,arrayNums);
                 startActivity(intent);
             }
         });

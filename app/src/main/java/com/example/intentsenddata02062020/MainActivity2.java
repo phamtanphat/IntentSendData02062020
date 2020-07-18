@@ -17,5 +17,11 @@ public class MainActivity2 extends AppCompatActivity {
 //        if (intent != null){
 //            String value = intent.getStringExtra(AppConstant.KEY_CHUOI);
 //        }
+        // 2: Nhan dang array
+        Intent intent = getIntent();
+        if (intent != null) {
+            int[] array = intent.getIntArrayExtra(AppConstant.KEY_ARRAY);
+            Log.d("BBB",array.length + "");
+        }
     }
 }
