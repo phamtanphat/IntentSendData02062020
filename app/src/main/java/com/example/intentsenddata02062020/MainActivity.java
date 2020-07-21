@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     Button mBtnSendString , mBtnSendArray , mBtnSendObject;
@@ -42,8 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 Sinhvien sinhvien = new Sinhvien();
                 sinhvien.age = 25;
                 sinhvien.name = "Nguyen Van A";
+                ArrayList<Sinhvien> sinhviens = new ArrayList<>();
+                sinhviens.add(sinhvien);
                 Intent intent = new Intent(MainActivity.this,MainActivity2.class);
-                intent.putExtra(AppConstant.KEY_OBJECT,sinhvien);
+                intent.putExtra(AppConstant.KEY_OBJECT,sinhviens);
                 startActivity(intent);
             }
         });

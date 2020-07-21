@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class MainActivity2 extends AppCompatActivity {
 
     @Override
@@ -26,8 +28,8 @@ public class MainActivity2 extends AppCompatActivity {
         // 3 : Nhan dang object(Serializable)
         Intent intent = getIntent();
         if (intent != null) {
-            Sinhvien sinhvien = (Sinhvien) intent.getSerializableExtra(AppConstant.KEY_OBJECT);
-            Log.d("BBB",sinhvien.name + "");
+            ArrayList<Sinhvien> sinhvien = (ArrayList<Sinhvien>) intent.getSerializableExtra(AppConstant.KEY_OBJECT);
+            Log.d("BBB",sinhvien.size() + "");
         }
     }
 }
