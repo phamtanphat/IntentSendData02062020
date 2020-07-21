@@ -19,5 +19,11 @@
         android:text="Send Array"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <Button
+        android:layout_below="@id/buttonSendArray"
+        android:id="@+id/buttonSendObject"
+        android:text="Send Object"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

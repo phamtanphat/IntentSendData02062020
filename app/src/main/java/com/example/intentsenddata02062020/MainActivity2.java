@@ -18,10 +18,16 @@ public class MainActivity2 extends AppCompatActivity {
 //            String value = intent.getStringExtra(AppConstant.KEY_CHUOI);
 //        }
         // 2: Nhan dang array
+//        Intent intent = getIntent();
+//        if (intent != null) {
+//            int[] array = intent.getIntArrayExtra(AppConstant.KEY_ARRAY);
+//            Log.d("BBB",array.length + "");
+//        }
+        // 3 : Nhan dang object(Serializable)
         Intent intent = getIntent();
         if (intent != null) {
-            int[] array = intent.getIntArrayExtra(AppConstant.KEY_ARRAY);
-            Log.d("BBB",array.length + "");
+            Sinhvien sinhvien = (Sinhvien) intent.getSerializableExtra(AppConstant.KEY_OBJECT);
+            Log.d("BBB",sinhvien.name + "");
         }
     }
 }
